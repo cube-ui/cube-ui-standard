@@ -1,0 +1,52 @@
+@require './var.styl'
+
+_reset-btn()
+  box-sizing border-box
+  margin 0
+  text-align center
+  border none
+  outline none
+
+make-btn()
+  make-block-btn()
+  _reset-btn()
+  font-size $btn-font-size
+  line-height $btn-line-height
+  color $btn-color
+  background $btn-bg
+  border-radius $btn-radius
+  make_active-btn($btn-active-bg)
+
+make-block-btn()
+  display flex
+  width 100%
+  align-items center
+  justify-content center
+
+make-inline-btn()
+  display inline-flex
+  width auto
+  vertical-align middle
+  make_active-btn($btn-active-bg)
+
+make-primary-btn()
+  display inline-block
+
+make-light-btn()
+  display inline-block
+
+make-outline-btn()
+  display inline-block
+
+make-outline-primary-btn()
+  display inline-block
+
+make_active-btn($bg, $border = null)
+  &^[0]_active
+  &:active
+    background $bg
+    if $border != null
+      // border-1px($border)
+
+make_disabled-btn()
+  display inline

@@ -1,0 +1,12 @@
+{
+  "name": "standard",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/estree": "0.0.41",
+    "vue": "^3.0.0-alpha.0"
+  }
+}

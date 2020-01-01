@@ -1,0 +1,18 @@
+@require './var.styl'
+@require './mixin.styl'
+
+.cube-btn
+  make-btn()
+  &-inline
+    make-inline-btn()
+  &-primary
+    make-primary-btn()
+  &-light
+    make-light-btn()
+  &-outline
+    make-outline-btn()
+    &-primary
+      make-outline-primary-btn()
+  &_disabled
+    make_disabled-btn()
+
