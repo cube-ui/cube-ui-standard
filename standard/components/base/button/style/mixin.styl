@@ -21,7 +21,7 @@ btn-block()
   width 100%
   align-items center
   justify-content center
-  height $btn-height
+  height $btn-size
   line-height $btn-line-height
   padding $btn-padding
   overflow hidden
@@ -75,7 +75,7 @@ btn-icon()
 make-btn_inline()
   display inline-flex
   width auto
-  height $btn_inline-height
+  height $btn_inline-size
   padding $btn_inline-padding
   vertical-align middle
   font-size $btn_inline-font-size
@@ -101,3 +101,15 @@ make-btn_link()
 
 make-btn_link_primary()
   btn-theme($btn_primary-bg, $btn_link-bg)
+
+make-btn_circle()
+  width $btn-size
+  border-radius $btn_circle-radius
+  & .cube-icon
+    margin-right 0
+    transform-origin center
+  &^[0]_inline
+    width $btn_inline-size
+  &^[0]_outline
+    &::after
+      border-radius $btn_circle-radius

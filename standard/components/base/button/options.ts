@@ -19,7 +19,8 @@ export const Options = componentOptions({
     primary: Boolean,
     outline: Boolean,
     light: Boolean,
-    link: Boolean
+    link: Boolean,
+    circle: Boolean
   },
   computed: {
     rootClass(): object {
@@ -32,7 +33,8 @@ export const Options = componentOptions({
         'cube-btn_outline_primary': this.outline && this.primary,
         'cube-btn_light': this.light,
         'cube-btn_link': this.link,
-        'cube-btn_link_primary': this.link && this.primary
+        'cube-btn_link_primary': this.link && this.primary,
+        'cube-btn_circle': this.circle
       }
     }
   },

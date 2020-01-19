@@ -26,6 +26,13 @@
     <cube-button link>Link Button</cube-button>
     <cube-button link primary>Link Primary Button</cube-button>
     <cube-button link disabled>Link Disabled Button</cube-button>
+    <cube-button icon="search" circle></cube-button>
+    <cube-button icon="search" circle inline></cube-button>
+    <cube-button icon="search" circle inline primary></cube-button>
+    <cube-button icon="search" circle inline outline></cube-button>
+    <cube-button icon="search" circle inline outline disabled></cube-button>
+    <cube-button icon="search" circle inline link></cube-button>
+    <cube-button circle inline>A</cube-button>
   </div>
 </template>
 
