@@ -1,25 +1,14 @@
 <template>
   <div id="app">
-    <cube-row>
-      <cube-col>A</cube-col>
-      <cube-spacer></cube-spacer>
-      <cube-col>B</cube-col>
-      <cube-spacer></cube-spacer>
-      <cube-col>C</cube-col>
-    </cube-row>
-    <cube-button>Add more</cube-button>
+    <router-view />
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-
-@Component({
-  components: {
-  }
-})
-export default class App extends Vue {}
-</script>
-
 <style lang="stylus">
+body
+  margin 0
+  background var(--cube-color-background)
+.cube-page
+  padding 10px
+  background var(--cube-color-surface)
 </style>

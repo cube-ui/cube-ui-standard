@@ -1,0 +1,28 @@
+@require './var.styl'
+
+make-btns()
+  display flex
+  > .cube-btn
+    margin-right $btns-gap
+  &::after
+    content ''
+    margin-left 'calc(0px - %s)' % $btns-gap
+
+make-btns_column()
+  flex-direction column
+  > .cube-btn
+    margin-right 0
+    margin-bottom $btns-gap
+  &::after
+    margin-top 'calc(0px - %s)' % $btns-gap
+
+make-btns_bottom()
+  position fixed
+  left 0
+  right 0
+  bottom 0
+  padding $btns_bottom-padding
+
+make-btns_shadow()
+  background $btns_shadow-bg
+  box-shadow $btns-shadow

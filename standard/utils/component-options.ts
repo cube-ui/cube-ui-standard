@@ -1,5 +1,6 @@
 import { ComputedGetter, WritableComputedOptions } from '@vue/reactivity'
 import {
+  ComponentOptions,
   ComponentOptionsWithoutProps,
   ComponentOptionsWithArrayProps,
   ComponentOptionsWithProps,
@@ -105,6 +106,6 @@ export function componentOptions<
   options: object
 }
 
-export function componentOptions(options: unknown) {
+export function componentOptions(options: ComponentOptions) {
   return options
 }

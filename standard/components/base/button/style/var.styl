@@ -1,11 +1,42 @@
 @require '../../../../base/index.styl'
 
+$btn-height := calc(var(--cube-size-xxl) * 5)
+$btn-padding := 0 1em
 $btn-font-size := var(--cube-font-size-md)
 $btn-line-height := var(--cube-line-height-normal)
+$btn-color := var(--cube-color-on-secondary)
+$btn-bg := var(--cube-color-secondary)
+$btn-radius := var(--cube-border-radius-xl)
 
-$btn-color := var(--cube-color-on-primary)
-$btn-bg := var(--cube-color-primary)
+$btn-tip-font-size := var(--cube-font-size-xxs)
 
-$btn-active-bg := var(--cube-color-primary)
+$btn-icon-margin-x := var(--cube-size-sm)
+$btn-icon-transform := scale(1.3)
 
-$btn-radius := 2px
+// active
+$btn_active-mix-bg := var(--cube-color-mix-active)
+
+// disabled
+$btn_disabled-color := var(--cube-color-on-disabled)
+$btn_disabled-bg := var(--cube-color-disabled)
+
+// inline
+$btn_inline-font-size := var(--cube-font-size-xs)
+$btn_inline-height := calc(var(--cube-size-xxl) * 3)
+$btn_inline-padding := 0 0.833em
+
+// primary
+$btn_primary-color := var(--cube-color-on-primary)
+$btn_primary-bg := var(--cube-color-primary)
+
+// light
+$btn_light-color := var(--cube-color-on-surface)
+$btn_light-bg := var(--cube-color-surface)
+
+// outline
+$btn_outline-color := var(--cube-color-text)
+$btn_outline-bg := transparent
+
+// link
+$btn_link-color := var(--cube-color-text)
+$btn_link-bg := transparent

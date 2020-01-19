@@ -1,3 +1,5 @@
+@require '../color/index.styl'
+
 .clear-fix
   &::after
     content ''
@@ -14,7 +16,7 @@
 
 .border-top-1px
   &::before
-    border-top 1PX solid $color-row-line
+    border-top 1PX solid var(--cube-color-border)
     left 0
     top 0
     width 100%
@@ -22,7 +24,7 @@
 
 .border-right-1px
   &::after
-    border-right 1PX solid $color-col-line
+    border-right 1PX solid var(--cube-color-separator)
     top 0
     right 0
     height 100%
@@ -30,7 +32,7 @@
 
 .border-bottom-1px
   &::after
-    border-bottom 1PX solid $color-row-line
+    border-bottom 1PX solid var(--cube-color-border)
     left 0
     bottom 0
     width 100%
@@ -38,7 +40,7 @@
 
 .border-left-1px
   &::before
-    border-left 1PX solid $color-col-line
+    border-left 1PX solid var(--cube-color-separator)
     top 0
     left 0
     height 100%

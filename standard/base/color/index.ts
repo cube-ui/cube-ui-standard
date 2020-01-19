@@ -1,32 +1,41 @@
-// main
-export const primary = '#000'
-export const secondary = '#000'
+// white black
+export const colorWhite = '#fff'
+export const colorBlack = '#000'
 
-// bgc
-export const background = '#000'
-export const surface = '#000'
+// main
+export const colorPrimary = '#ff7f41'
+export const colorSecondary = '#092847'
+
+// bg
+export const colorBackground = '#f7f9fc'
+export const colorSurface = colorWhite
 //// function
-export const success = '#000'
-export const error = '#000'
-export const warning = '#000'
-export const info = '#000'
+export const colorSuccess = '#29b395'
+export const colorError = '#ff4340'
+export const colorWarning = '#ffbc57'
+export const colorInfo = '#9eacba'
+export const colorDisabled = '#ccc'
 
 // color
 //// main
-export const onPrimary = '#000'
-export const onSecondary = '#000'
+export const colorOnPrimary = colorWhite
+export const colorOnSecondary = colorWhite
 //// bg
-export const onBackground = '#000'
-export const onSurface = '#000'
+export const colorOnBackground = '#757575'
+export const colorOnSurface = '#333'
 ////// function
-export const onSuccess = '#000'
-export const onError = '#000'
-export const onWarning = '#000'
-export const onInfo = '#000'
+export const colorOnSuccess = colorWhite
+export const colorOnError = colorWhite
+export const colorOnWarning = colorWhite
+export const colorOnInfo = colorWhite
+export const colorOnDisabled = colorWhite
 
 // helper
-export const border = '#000'
-export const separator = '#000'
-export const link = '#000'
-export const text = '#000'
-export const placeholder = '#000'
+export const colorBorder = '#e6e6e6'
+export const colorSeparator = '#eaeaea'
+export const colorLink = '#ff7f41'
+export const colorHeading = colorBlack
+export const colorText = '#333'
+export const colorPlaceholder = '#999'
+export const colorMask = 'rgba(37, 38, 45, .4)'
+export const colorMixActive = 'rgba(0, 0, 0, .08)'

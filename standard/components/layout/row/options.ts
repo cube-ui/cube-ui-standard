@@ -16,10 +16,6 @@ export const Options = componentOptions({
     alignContent: {
       type: String,
       default: ''
-    },
-    gutter: {
-      type: Number,
-      default: 0
     }
   }
 })

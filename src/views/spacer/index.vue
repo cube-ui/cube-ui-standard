@@ -1,0 +1,13 @@
+<template>
+  <cube-row>
+    <cube-col>A</cube-col>
+    <cube-spacer></cube-spacer>
+    <cube-col>
+      <cube-row>
+        <cube-col>B-0</cube-col>
+        <cube-col>B-1</cube-col>
+      </cube-row>
+    </cube-col>
+    <cube-col>C</cube-col>
+  </cube-row>
+</template>

@@ -1,18 +1,21 @@
-@require './var.styl'
 @require './mixin.styl'
 
 .cube-btn
   make-btn()
-  &-inline
-    make-inline-btn()
-  &-primary
-    make-primary-btn()
-  &-light
-    make-light-btn()
-  &-outline
-    make-outline-btn()
-    &-primary
-      make-outline-primary-btn()
-  &_disabled
-    make_disabled-btn()
+  &_inline
+    make-btn_inline()
+  &_primary
+    make-btn_primary()
+  &_outline
+    make-btn_outline()
+    &_primary
+      make-btn_outline_primary()
+  &_light
+    make-btn_light()
+  &_link
+    make-btn_link()
+    &_primary
+      make-btn_link_primary()
 
+  &-tip
+    make-btn-tip()

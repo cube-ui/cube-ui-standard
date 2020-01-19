@@ -1,5 +1,5 @@
 {
-  "name": "standard",
+  "name": "cube-ui-standard",
   "version": "0.0.1",
   "main": "index.ts",
   "scripts": {
@@ -7,6 +7,19 @@
   },
   "dependencies": {
     "@types/estree": "0.0.41",
-    "vue": "^3.0.0-alpha.0"
-  }
+    "vue": "^3.0.0-alpha.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cube-ui/cube-ui-standard.git"
+  },
+  "keywords": [
+    "cube-ui"
+  ],
+  "author": "dolymood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cube-ui/cube-ui-standard/issues"
+  },
+  "homepage": "https://github.com/cube-ui/cube-ui-standard#readme"
 }

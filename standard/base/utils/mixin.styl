@@ -6,7 +6,7 @@ flex-fix()
   flex-basis 0.000000001PX
   width 1%
 
-border-1px($color = #ccc, $radius = 2PX, $style = solid)
+border-1px($color = null, $radius = 2PX, $style = solid)
   position relative
   &::after
     content ''
@@ -24,13 +24,30 @@ border-1px($color = #ccc, $radius = 2PX, $style = solid)
     @media (min-resolution 2dppx)
       width 200%
       height 200%
-      border-radius $radius * 2
+      border-radius 'calc(%s * 2)' % ($radius)
       transform scale(.5)
     @media (min-resolution 3dppx)
       width 300%
       height 300%
-      border-radius $radius * 3
+      border-radius 'calc(%s * 3)' % ($radius)
       transform scale(.333)
+
+// should used with util(border-x-1px classes)
+border-top-1px($color)
+  &::before
+    border-top-color $color
+
+border-right-1px($color)
+  &::after
+    border-right-color $color
+
+border-bottom-1px($color)
+  &::after
+    border-bottom-color $color
+
+border-left-1px($color)
+  &::before
+    border-left-color $color
 
 border-none()
   &::before

@@ -1,52 +1,103 @@
+@require '../../../../base/utils/index.styl'
 @require './var.styl'
 
-_reset-btn()
-  box-sizing border-box
-  margin 0
-  text-align center
-  border none
-  outline none
-
 make-btn()
-  make-block-btn()
-  _reset-btn()
+  position relative
+  btn-block()
+  btn-reset()
   font-size $btn-font-size
-  line-height $btn-line-height
-  color $btn-color
-  background $btn-bg
+  btn-theme()
   border-radius $btn-radius
-  make_active-btn($btn-active-bg)
+  btn_active()
+  btn_disabled()
+  btn-icon()
 
-make-block-btn()
+make-btn-tip()
+  display block
+  font-size $btn-tip-font-size
+
+btn-block()
   display flex
   width 100%
   align-items center
   justify-content center
+  height $btn-height
+  line-height $btn-line-height
+  padding $btn-padding
+  overflow hidden
 
-make-inline-btn()
+btn-reset()
+  box-sizing border-box
+  margin 0
+  text-align center
+  white-space nowrap
+  font-family inherit
+  font-weight inherit
+  border none
+  outline none
+  -webkit-appearance none
+  -webkit-tap-highlight-color transparent
+
+btn-theme($color = $btn-color, $bg = $btn-bg, $args...)
+  color $color
+  background $bg
+  if $args
+    border-1px($args[0] is true ? null : $args[0], $btn-radius)
+
+btn_active($mix-bg = $btn_active-mix-bg)
+  &^[0]_active
+  &^[0]:active
+    &::before
+      content ''
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      background $mix-bg
+
+btn_disabled($color = $btn_disabled-color, $bg = $btn_disabled-bg)
+  &^[0]_disabled
+  &^[0]:disabled
+    btn-theme($color, $bg)
+    // overwrite active
+    &::before
+      display none
+
+btn-icon()
+  &
+    .cube-icon
+      display inline-block
+      margin-right $btn-icon-margin-x
+      transform $btn-icon-transform
+      transform-origin right center
+
+make-btn_inline()
   display inline-flex
   width auto
+  height $btn_inline-height
+  padding $btn_inline-padding
   vertical-align middle
-  make_active-btn($btn-active-bg)
+  font-size $btn_inline-font-size
 
-make-primary-btn()
-  display inline-block
+make-btn_primary()
+  btn-theme($btn_primary-color, $btn_primary-bg)
 
-make-light-btn()
-  display inline-block
+make-btn_light()
+  btn-theme($btn_light-color, $btn_light-bg)
+  // just swap bg and color
+  btn_disabled($btn_disabled-bg, $btn_light-bg)
 
-make-outline-btn()
-  display inline-block
+make-btn_outline()
+  btn-theme($btn_outline-color, $btn_outline-bg, true)
+  btn_disabled($btn_disabled-bg, $btn_outline-bg)
 
-make-outline-primary-btn()
-  display inline-block
+make-btn_outline_primary()
+  btn-theme($btn_primary-bg, $btn_outline-bg)
 
-make_active-btn($bg, $border = null)
-  &^[0]_active
-  &:active
-    background $bg
-    if $border != null
-      // border-1px($border)
+make-btn_link()
+  btn-theme($btn_link-color, $btn_link-bg)
+  btn_disabled($btn_disabled-bg, $btn_link-bg)
 
-make_disabled-btn()
-  display inline
+make-btn_link_primary()
+  btn-theme($btn_primary-bg, $btn_link-bg)

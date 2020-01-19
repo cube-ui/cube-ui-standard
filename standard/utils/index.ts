@@ -1,3 +1,4 @@
 export * from './component-options'
-export * from './create-component'
+export * from './define-component'
 export * from './shims-vue'
+export * from './mixins'

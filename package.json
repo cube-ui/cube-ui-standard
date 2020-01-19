@@ -1,5 +1,5 @@
 {
-  "name": "cube-ui-standard",
+  "name": "cube-ui-standard-site",
   "version": "0.0.1",
   "description": "UI standard for Cube-UI",
   "main": "src/main.ts",
@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "core-js": "^3.4.3",
+    "qrcode-js-package": "^1.0.4",
+    "v-tooltip": "^2.0.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
@@ -38,19 +40,6 @@
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cube-ui/cube-ui-standard.git"
-  },
-  "keywords": [
-    "cube-ui"
-  ],
-  "author": "dolymood",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cube-ui/cube-ui-standard/issues"
-  },
-  "homepage": "https://github.com/cube-ui/cube-ui-standard#readme",
   "browserslist": [
     "> 1%",
     "not ie <= 11",
